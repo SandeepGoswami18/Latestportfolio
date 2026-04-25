@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+body{
+  font-family: "poppins",sans-serif;
+  cursor: default; /* ✅ arrow visible */
+}
+
+h1,h2{
+  font-family: "Roboto",sans-serif;
+}
+
+@layer utilities {
+  .gradient {
+    background: linear-gradient(-45deg, #302b63, #00bf8f, #1cd8d2);
+  }
+}
+
+/* 🔥 MAIN PARTICLE */
+.particle {
+  width: 6px;
+  height: 6px;
+  background: #00ff88;
+  border-radius: 50%;
+  position: absolute;
+  animation: sparkle 0.7s ease-out forwards;
+  box-shadow: 0 0 8px #00ff88, 0 0 16px #00ff88;
+}
+
+/* 🔥 SMALL PARTICLE */
+.particle-small {
+  width: 3px;
+  height: 3px;
+  background: #00ff88;
+  border-radius: 50%;
+  position: absolute;
+  animation: sparkleSmall 0.9s ease-out forwards;
+  opacity: 0.8;
+}
+
+/* 🔥 ANIMATION */
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.4);
+  }
+}
+
+@keyframes sparkleSmall {
+  0% {
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.3);
+  }
+}
