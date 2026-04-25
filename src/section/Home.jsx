@@ -86,12 +86,14 @@ export default function Home() {
               View Projects
             </a>
 
-            <a
-              href="#"
-              className="px-6 py-3 border border-green-400 text-green-400 rounded-lg hover:bg-green-400/10 transition"
-            >
-              Resume
-            </a>
+           <a
+  href="/Googleresume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 border border-green-400 text-green-400 rounded-lg hover:bg-green-400/10 transition"
+>
+  Resume
+</a>
           </div>
 
           {/* Social Icons */}
